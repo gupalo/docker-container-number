@@ -21,8 +21,10 @@ Call from container
 Add to docker-compose.yaml
 
     dcn:
-        image: gupalo/docker-container-number
+        image: 'gupalo/docker-container-number'
         volumes: ['/var/run/docker.sock:/var/run/docker.sock']
+        restart: 'always'
+        #networks: ['common']
 
 You can add this container to each `docker-compose.yaml` or create global `docker-compose.yaml` with shared network.
 
